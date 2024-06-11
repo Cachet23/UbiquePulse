@@ -55,7 +55,7 @@ void loop() {
     // Check if it's time to report
     if (millis() - tsLastReport > REPORTING_PERIOD_MS) {
         // Get raw values
-        while (sensor.getRawValues(&ir, &red)) {
+        if (sensor.getRawValues(&ir, &red)) {
             // Create JSON string with sensor data
             String jsonData = "{ \"heartRate\": " + String(pox.getHeartRate()) + 
                               ", \"spO2\": " + String(pox.getSpO2()) + 
