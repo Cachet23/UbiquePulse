@@ -17,7 +17,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      MONGO_URI: mongodb://mongodb:27017/your-database
+      - MONGO_URI=mongodb://mongodb:27017/sensordata
     depends_on:
       - mongodb
 
@@ -30,3 +30,4 @@ services:
 
 volumes:
   mongo-data:
+  
