@@ -2,7 +2,7 @@
 #include "MAX30100.h"
 #include "MAX30100_PulseOximeter.h"
 
-#define REPORTING_PERIOD_MS 1000
+#define REPORTING_PERIOD_MS 100
 
 // Define a MAX30100 sensor instance
 MAX30100 sensor;
