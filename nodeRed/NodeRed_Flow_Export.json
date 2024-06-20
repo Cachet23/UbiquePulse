@@ -1,0 +1,2338 @@
+[
+    {
+        "id": "6215630ef1f546a8",
+        "type": "tab",
+        "label": "Home Seite",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3a9b402ed7210a81",
+        "type": "tab",
+        "label": "Einstellungen Seite",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "78b3ec4aae395941",
+        "type": "group",
+        "z": "6215630ef1f546a8",
+        "name": "Sauerstoffsättigung im Blut anzeigen",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true,
+            "color": "#3f3f3f",
+            "stroke": "none"
+        },
+        "nodes": [
+            "35f858984fdb41f7",
+            "d72fb4cc02a355b2"
+        ],
+        "x": 514,
+        "y": 359,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "cda92ec1548d6bf5",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Einstellung: Puls anzeigen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e53cc1594e92ba17",
+            "2f7c7219d9841547",
+            "500c42a9ce806889",
+            "a87e04524c393a52",
+            "6990ea57bc455ab2",
+            "e00407dc8ddca475",
+            "174ed65ef5ce7d64",
+            "ac88cab7bc7af654"
+        ],
+        "x": 88,
+        "y": 133,
+        "w": 1504,
+        "h": 234
+    },
+    {
+        "id": "6286612d9eaca6ca",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Einstellung: Pulsgraph anzeigen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "58e68c99e67884d0",
+            "7418ceaad0129eeb",
+            "36ea861a008d2321",
+            "4473dacc32cb6f00",
+            "b0ceb44c8d86db55",
+            "46a31d4def1c8f58",
+            "8e3ed1b11fc9d0e5",
+            "364f9748a50785e3"
+        ],
+        "x": 88,
+        "y": 413,
+        "w": 1524,
+        "h": 234
+    },
+    {
+        "id": "36421e4cbf294c5d",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Einstellung: Sauerstoffsättigung im Blut anzeigen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b50281f1b6f0a8b2",
+            "77e6570c5ed08ef3",
+            "79eb6be08cb7243a",
+            "7ba956dfc9b8fc90",
+            "454ab2dfa5e99dd7",
+            "f7126805461193b1",
+            "d183b59ff44aeb73",
+            "355e3fdb19ce85dc"
+        ],
+        "x": 88,
+        "y": 693,
+        "w": 1418,
+        "h": 234
+    },
+    {
+        "id": "279522cc74dccc50",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Test MQTT \"showSPO2\"",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4aa6b2a6c6ebddfa",
+            "0505da815fd7f079",
+            "ed9026f68f766ed9"
+        ],
+        "x": 1554,
+        "y": 739,
+        "w": 492,
+        "h": 122
+    },
+    {
+        "id": "d34e339c36b9f1c5",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Test MQTT \"showPuls\"",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "72ead058eef28ac7",
+            "bcda2ac5df337d72",
+            "55edf958f44fcb1d"
+        ],
+        "x": 1654,
+        "y": 179,
+        "w": 472,
+        "h": 122
+    },
+    {
+        "id": "797c306f2c806ad0",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Test MQTT \"showPulseGraph\"",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e0607c7ea263775d",
+            "ac9fb32926163036",
+            "24f94cd27fa7cb53"
+        ],
+        "x": 1674,
+        "y": 479,
+        "w": 512,
+        "h": 122
+    },
+    {
+        "id": "a6c9165f2d2c2abd",
+        "type": "group",
+        "z": "6215630ef1f546a8",
+        "name": "Rohdaten zum Puls anzeigen",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true,
+            "stroke": "none",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "47729b1679753453",
+            "e6f4aa14b075c8c5"
+        ],
+        "x": 514,
+        "y": 479,
+        "w": 512,
+        "h": 82
+    },
+    {
+        "id": "c69e62c21f2fbcfa",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Einstellung: Rohdaten zum Puls anzeigen",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "249cb9055f3213a3",
+            "7cdb373b349bc040",
+            "189aa3635650ad6f",
+            "020018897b32c020",
+            "f97ca885f5e83165",
+            "dd06711198d80bf5",
+            "0cef6eaa9df963f7",
+            "730bfda40b1064a8"
+        ],
+        "x": 88,
+        "y": 973,
+        "w": 1524,
+        "h": 254
+    },
+    {
+        "id": "b373114155e3ae26",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "name": "Test MQTT \"showRawdataPulse\"",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1a94fc9263202340",
+            "1589cc3aaa63d50d",
+            "5255dbcbf96f1c64"
+        ],
+        "x": 1674,
+        "y": 1039,
+        "w": 532,
+        "h": 122
+    },
+    {
+        "id": "08265241c0c04f2c",
+        "type": "group",
+        "z": "6215630ef1f546a8",
+        "name": "Puls anzeigen",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#ffdf7f",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "21cbdab907d414f1",
+            "df14662035d218e7",
+            "f34ece7e3865d43e"
+        ],
+        "x": 514,
+        "y": 179,
+        "w": 512,
+        "h": 142
+    },
+    {
+        "id": "57a2d1ab301ffc4c",
+        "type": "group",
+        "z": "6215630ef1f546a8",
+        "name": "MQTT senden",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#bfdbef",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "64205849b57b4169",
+            "50eedebd9ae5d23d",
+            "068aaa98685bb106"
+        ],
+        "x": 1094,
+        "y": 239,
+        "w": 712,
+        "h": 82
+    },
+    {
+        "id": "5a1dcb4114c4824a",
+        "type": "group",
+        "z": "6215630ef1f546a8",
+        "name": "MQTT senden",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#bfdbef",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "4b21215a4bd12a6e"
+        ],
+        "x": 274,
+        "y": 659,
+        "w": 292,
+        "h": 82
+    },
+    {
+        "id": "0cef6eaa9df963f7",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "MQTT empfangen",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#c8e7a7",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "b834937c875fd899",
+            "b6ab080a536e8de7"
+        ],
+        "x": 114,
+        "y": 999,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "730bfda40b1064a8",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "MQTT senden",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#bfdbef",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "d01af971167f6c18",
+            "80ab51bd749f97b4"
+        ],
+        "x": 954,
+        "y": 1119,
+        "w": 632,
+        "h": 82
+    },
+    {
+        "id": "d183b59ff44aeb73",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "MQTT empfangen",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#c8e7a7",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "e2ebb622622ad8ed",
+            "3de971733f3036ed"
+        ],
+        "x": 114,
+        "y": 719,
+        "w": 572,
+        "h": 82
+    },
+    {
+        "id": "355e3fdb19ce85dc",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "MQTT senden",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#bfdbef",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "aaa19f0ec95f7b0d",
+            "973f701ea5ed0e56"
+        ],
+        "x": 914,
+        "y": 819,
+        "w": 552,
+        "h": 82
+    },
+    {
+        "id": "8e3ed1b11fc9d0e5",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "MQTT empfangen",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#c8e7a7",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "4b1d6ab5effdb195",
+            "d5ac4dab3a9918ff"
+        ],
+        "x": 114,
+        "y": 439,
+        "w": 592,
+        "h": 82
+    },
+    {
+        "id": "364f9748a50785e3",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "MQTT senden",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#bfdbef",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "a2c944097dfc437f",
+            "8c3ee98af2a92406"
+        ],
+        "x": 974,
+        "y": 539,
+        "w": 612,
+        "h": 82
+    },
+    {
+        "id": "e00407dc8ddca475",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "MQTT empfangen",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#c8e7a7",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "1ab5059769f7873a",
+            "230c3ac6ecaaab48"
+        ],
+        "x": 114,
+        "y": 159,
+        "w": 592,
+        "h": 82
+    },
+    {
+        "id": "ac88cab7bc7af654",
+        "type": "group",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "MQTT senden",
+        "style": {
+            "stroke": "none",
+            "label": true,
+            "fill": "#bfdbef",
+            "color": "#3f3f3f"
+        },
+        "nodes": [
+            "582abc92816dbe9f",
+            "0b78351854d9e714"
+        ],
+        "x": 1014,
+        "y": 259,
+        "w": 552,
+        "h": 82
+    },
+    {
+        "id": "fed12949c626bbee",
+        "type": "serial-port",
+        "name": "SerialPort 1",
+        "serialport": "COM7",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\r",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "39bfb309feeedce2",
+        "type": "ui_group",
+        "name": "Willkommen",
+        "tab": "12c2334d320844cf",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "12c2334d320844cf",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "67aad3df6e401637",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0064708ed1d57071",
+        "type": "mqtt-broker",
+        "name": "Local MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "93384f10.9250e8",
+        "type": "ui_tab",
+        "name": "Hide_Show",
+        "icon": "dashboard",
+        "order": 10,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aa2de6a5fef88c28",
+        "type": "ui_group",
+        "name": "Puls",
+        "tab": "12c2334d320844cf",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5d163b6fbab0f8bd",
+        "type": "ui_tab",
+        "name": "Einstellungen",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f79ccea4ea405c58",
+        "type": "ui_group",
+        "name": "Anzeige",
+        "tab": "5d163b6fbab0f8bd",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b97366f2fca4070d",
+        "type": "ui_group",
+        "name": "Pulsverlauf",
+        "tab": "12c2334d320844cf",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d8d9190a65dc5194",
+        "type": "ui_group",
+        "name": "Sauerstoffsättigung Blut",
+        "tab": "12c2334d320844cf",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2e2aae950421bfa5",
+        "type": "ui_spacer",
+        "z": "6215630ef1f546a8",
+        "name": "spacer",
+        "group": "d8d9190a65dc5194",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0696284f07d98965",
+        "type": "ui_group",
+        "name": "Rohdaten Puls",
+        "tab": "12c2334d320844cf",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7c45b3142998cdb1",
+        "type": "serial in",
+        "z": "6215630ef1f546a8",
+        "name": "ESP32 Sensordaten",
+        "serial": "fed12949c626bbee",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "5bb4ce77604cd1c0",
+                "4b21215a4bd12a6e"
+            ]
+        ]
+    },
+    {
+        "id": "df14662035d218e7",
+        "type": "ui_chart",
+        "z": "6215630ef1f546a8",
+        "g": "08265241c0c04f2c",
+        "name": "Pulsdaten Chart",
+        "group": "b97366f2fca4070d",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "label": "Pulsdaten als Graph",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "warte auf Pulsdaten...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "220",
+        "removeOlder": "3",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 280,
+        "wires": [
+            [
+                "64205849b57b4169"
+            ]
+        ]
+    },
+    {
+        "id": "5bb4ce77604cd1c0",
+        "type": "json",
+        "z": "6215630ef1f546a8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 400,
+        "wires": [
+            [
+                "21cbdab907d414f1",
+                "35f858984fdb41f7",
+                "47729b1679753453"
+            ]
+        ]
+    },
+    {
+        "id": "21cbdab907d414f1",
+        "type": "function",
+        "z": "6215630ef1f546a8",
+        "g": "08265241c0c04f2c",
+        "name": "get BPM",
+        "func": "msg.payload = msg.payload.bpm.toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "df14662035d218e7",
+                "f34ece7e3865d43e"
+            ]
+        ]
+    },
+    {
+        "id": "35f858984fdb41f7",
+        "type": "function",
+        "z": "6215630ef1f546a8",
+        "g": "78b3ec4aae395941",
+        "name": "get SpO2",
+        "func": "msg.payload = msg.payload.SpO2;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "d72fb4cc02a355b2"
+            ]
+        ]
+    },
+    {
+        "id": "64205849b57b4169",
+        "type": "function",
+        "z": "6215630ef1f546a8",
+        "g": "57a2d1ab301ffc4c",
+        "name": "extract PulseGraphData",
+        "func": "\nlet pulsData = msg.payload[0].data[0];\nmsg.payload = {};\nmsg.payload['pulsData'] = pulsData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 280,
+        "wires": [
+            [
+                "50eedebd9ae5d23d"
+            ]
+        ]
+    },
+    {
+        "id": "4b21215a4bd12a6e",
+        "type": "mqtt out",
+        "z": "6215630ef1f546a8",
+        "g": "5a1dcb4114c4824a",
+        "name": "MQTT Push \"Sensordaten\"",
+        "topic": "sensorData",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 420,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "068aaa98685bb106",
+        "type": "mqtt out",
+        "z": "6215630ef1f546a8",
+        "g": "57a2d1ab301ffc4c",
+        "name": "MQTT Push \"PulseGraphData\"",
+        "topic": "pulsGraphData",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "50eedebd9ae5d23d",
+        "type": "json",
+        "z": "6215630ef1f546a8",
+        "g": "57a2d1ab301ffc4c",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1430,
+        "y": 280,
+        "wires": [
+            [
+                "068aaa98685bb106"
+            ]
+        ]
+    },
+    {
+        "id": "f34ece7e3865d43e",
+        "type": "ui_gauge",
+        "z": "6215630ef1f546a8",
+        "g": "08265241c0c04f2c",
+        "name": "",
+        "group": "aa2de6a5fef88c28",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Puls pro Minute",
+        "label": "bpm",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "220",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "90",
+        "seg2": "190",
+        "diff": false,
+        "className": "",
+        "x": 920,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d72fb4cc02a355b2",
+        "type": "ui_gauge",
+        "z": "6215630ef1f546a8",
+        "g": "78b3ec4aae395941",
+        "name": "Sauerstoffsättigung im Blut in %",
+        "group": "d8d9190a65dc5194",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "Sauerstoffsättigung in %",
+        "label": " %",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 870,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "47729b1679753453",
+        "type": "function",
+        "z": "6215630ef1f546a8",
+        "g": "a6c9165f2d2c2abd",
+        "name": "get RawDataRed",
+        "func": "msg.payload = msg.payload.rawDataBPM;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 520,
+        "wires": [
+            [
+                "e6f4aa14b075c8c5"
+            ]
+        ]
+    },
+    {
+        "id": "e6f4aa14b075c8c5",
+        "type": "ui_text",
+        "z": "6215630ef1f546a8",
+        "g": "a6c9165f2d2c2abd",
+        "group": "0696284f07d98965",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "Show RawDataPulse",
+        "label": "Sensordaten Puls:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 900,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e53cc1594e92ba17",
+        "type": "ui_switch",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "",
+        "label": "show Pulse",
+        "tooltip": "",
+        "group": "f79ccea4ea405c58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "2f7c7219d9841547",
+                "582abc92816dbe9f"
+            ]
+        ]
+    },
+    {
+        "id": "2f7c7219d9841547",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 200,
+        "wires": [
+            [
+                "a87e04524c393a52"
+            ],
+            [
+                "500c42a9ce806889"
+            ]
+        ]
+    },
+    {
+        "id": "a87e04524c393a52",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Home_Puls\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 180,
+        "wires": [
+            [
+                "6990ea57bc455ab2"
+            ]
+        ]
+    },
+    {
+        "id": "500c42a9ce806889",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Home_Puls\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 220,
+        "wires": [
+            [
+                "6990ea57bc455ab2"
+            ]
+        ]
+    },
+    {
+        "id": "6990ea57bc455ab2",
+        "type": "ui_ui_control",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "",
+        "events": "all",
+        "x": 1440,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ec8eeb9227cde95",
+        "type": "ui_template",
+        "z": "3a9b402ed7210a81",
+        "d": true,
+        "group": "8f3028ba.83089",
+        "name": "Dashboard Style",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    /* Styling for all the groups */\n    ui-card-panel {\n        box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;\n        border-radius: 5px;\n    }\n    \n    /* Styling for all the Elements in the Groups */\n    ui-card-panel * {\n        border-radius: 10px;\n        //color: black;\n        \n    }\n    \n    /* Styling of the Group Title */\n    .nr-dashboard-cardtitle {\n        font-weight: bold !important;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 510,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "58e68c99e67884d0",
+        "type": "ui_switch",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "",
+        "label": "show PulseGraph",
+        "tooltip": "",
+        "group": "f79ccea4ea405c58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "7418ceaad0129eeb",
+                "a2c944097dfc437f"
+            ]
+        ]
+    },
+    {
+        "id": "7418ceaad0129eeb",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1050,
+        "y": 480,
+        "wires": [
+            [
+                "36ea861a008d2321"
+            ],
+            [
+                "4473dacc32cb6f00"
+            ]
+        ]
+    },
+    {
+        "id": "36ea861a008d2321",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Home_Pulsverlauf\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 460,
+        "wires": [
+            [
+                "b0ceb44c8d86db55"
+            ]
+        ]
+    },
+    {
+        "id": "4473dacc32cb6f00",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Home_Pulsverlauf\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 500,
+        "wires": [
+            [
+                "b0ceb44c8d86db55"
+            ]
+        ]
+    },
+    {
+        "id": "b0ceb44c8d86db55",
+        "type": "ui_ui_control",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "",
+        "events": "all",
+        "x": 1460,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b50281f1b6f0a8b2",
+        "type": "ui_switch",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "",
+        "label": "show SPO2",
+        "tooltip": "",
+        "group": "f79ccea4ea405c58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 810,
+        "y": 760,
+        "wires": [
+            [
+                "77e6570c5ed08ef3",
+                "aaa19f0ec95f7b0d"
+            ]
+        ]
+    },
+    {
+        "id": "77e6570c5ed08ef3",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 760,
+        "wires": [
+            [
+                "79eb6be08cb7243a"
+            ],
+            [
+                "7ba956dfc9b8fc90"
+            ]
+        ]
+    },
+    {
+        "id": "79eb6be08cb7243a",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Home_Sauerstoffsättigung_Blut\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 740,
+        "wires": [
+            [
+                "454ab2dfa5e99dd7"
+            ]
+        ]
+    },
+    {
+        "id": "7ba956dfc9b8fc90",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Home_Sauerstoffsättigung_Blut\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1210,
+        "y": 780,
+        "wires": [
+            [
+                "454ab2dfa5e99dd7"
+            ]
+        ]
+    },
+    {
+        "id": "454ab2dfa5e99dd7",
+        "type": "ui_ui_control",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "",
+        "events": "all",
+        "x": 1420,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bcda2ac5df337d72",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "d34e339c36b9f1c5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1750,
+        "y": 220,
+        "wires": [
+            [
+                "55edf958f44fcb1d"
+            ]
+        ]
+    },
+    {
+        "id": "55edf958f44fcb1d",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "d34e339c36b9f1c5",
+        "name": "MQTT Publisher \"showPulse\"",
+        "topic": "showPulse",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1980,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "72ead058eef28ac7",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "d34e339c36b9f1c5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1750,
+        "y": 260,
+        "wires": [
+            [
+                "55edf958f44fcb1d"
+            ]
+        ]
+    },
+    {
+        "id": "e0607c7ea263775d",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "797c306f2c806ad0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1770,
+        "y": 520,
+        "wires": [
+            [
+                "24f94cd27fa7cb53"
+            ]
+        ]
+    },
+    {
+        "id": "24f94cd27fa7cb53",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "797c306f2c806ad0",
+        "name": "MQTT Publisher \"showPulseGraph\"",
+        "topic": "showPulseGraph",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 2020,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ac9fb32926163036",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "797c306f2c806ad0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1770,
+        "y": 560,
+        "wires": [
+            [
+                "24f94cd27fa7cb53"
+            ]
+        ]
+    },
+    {
+        "id": "ed9026f68f766ed9",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "279522cc74dccc50",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1650,
+        "y": 780,
+        "wires": [
+            [
+                "4aa6b2a6c6ebddfa"
+            ]
+        ]
+    },
+    {
+        "id": "4aa6b2a6c6ebddfa",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "279522cc74dccc50",
+        "name": "MQTT Publisher \"showSPO2\"",
+        "topic": "showSPO2",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1890,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "0505da815fd7f079",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "279522cc74dccc50",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1650,
+        "y": 820,
+        "wires": [
+            [
+                "4aa6b2a6c6ebddfa"
+            ]
+        ]
+    },
+    {
+        "id": "249cb9055f3213a3",
+        "type": "ui_switch",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "",
+        "label": "show RawdataPulse",
+        "tooltip": "",
+        "group": "f79ccea4ea405c58",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 840,
+        "y": 1040,
+        "wires": [
+            [
+                "7cdb373b349bc040",
+                "d01af971167f6c18"
+            ]
+        ]
+    },
+    {
+        "id": "7cdb373b349bc040",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 1040,
+        "wires": [
+            [
+                "189aa3635650ad6f"
+            ],
+            [
+                "020018897b32c020"
+            ]
+        ]
+    },
+    {
+        "id": "189aa3635650ad6f",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"show\":[\"Home_Rohdaten_Puls\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 1020,
+        "wires": [
+            [
+                "f97ca885f5e83165"
+            ]
+        ]
+    },
+    {
+        "id": "020018897b32c020",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"group\":{\"hide\":[\"Home_Rohdaten_Puls\"]}}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 1060,
+        "wires": [
+            [
+                "f97ca885f5e83165"
+            ]
+        ]
+    },
+    {
+        "id": "f97ca885f5e83165",
+        "type": "ui_ui_control",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "",
+        "events": "all",
+        "x": 1440,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a94fc9263202340",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "b373114155e3ae26",
+        "name": "MQTT Publisher \"showRawdataPulse\"",
+        "topic": "showRawdataPulse",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 2030,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "1589cc3aaa63d50d",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "b373114155e3ae26",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 1770,
+        "y": 1120,
+        "wires": [
+            [
+                "1a94fc9263202340"
+            ]
+        ]
+    },
+    {
+        "id": "5255dbcbf96f1c64",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "b373114155e3ae26",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 1770,
+        "y": 1080,
+        "wires": [
+            [
+                "1a94fc9263202340"
+            ]
+        ]
+    },
+    {
+        "id": "b6ab080a536e8de7",
+        "type": "mqtt in",
+        "z": "3a9b402ed7210a81",
+        "g": "0cef6eaa9df963f7",
+        "name": "MQTT Subscriber \"showRawdataPuls\"",
+        "topic": "showRawdataPulse",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0064708ed1d57071",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 1040,
+        "wires": [
+            [
+                "b834937c875fd899"
+            ]
+        ]
+    },
+    {
+        "id": "dd06711198d80bf5",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "c69e62c21f2fbcfa",
+        "name": "set startValue",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 580,
+        "y": 1120,
+        "wires": [
+            [
+                "249cb9055f3213a3"
+            ]
+        ],
+        "info": "Schieberegler auf \"true\" setzen, \r\nwenn Node-Red gestartet wird"
+    },
+    {
+        "id": "d01af971167f6c18",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "730bfda40b1064a8",
+        "name": "publish \"showRawdataPulse\"",
+        "property": "action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "valueFromMQTT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1100,
+        "y": 1160,
+        "wires": [
+            [
+                "80ab51bd749f97b4"
+            ]
+        ]
+    },
+    {
+        "id": "b834937c875fd899",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "0cef6eaa9df963f7",
+        "name": "set valueFromMQTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "valueFromMQTT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 1040,
+        "wires": [
+            [
+                "249cb9055f3213a3"
+            ]
+        ],
+        "info": "Dient zur Erkennung, ob in Node-Red der \r\nSchieberegler zum Ein- und Ausblenden der\r\nUI-Elemente betätigt wurde. \r\nWurde der Schieberegler in Node-Red betätigt,\r\ndann wird der aktuelle Wert des Schiebereglers \r\nmittels MQTT published, um in der App den \r\nakutellen Stand zu sehen."
+    },
+    {
+        "id": "80ab51bd749f97b4",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "730bfda40b1064a8",
+        "name": "MQTT Publisher \"showRawdataPulse\"",
+        "topic": "showRawdataPuls",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1410,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "f7126805461193b1",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "36421e4cbf294c5d",
+        "name": "set startValue",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 580,
+        "y": 840,
+        "wires": [
+            [
+                "b50281f1b6f0a8b2"
+            ]
+        ],
+        "info": "Schieberegler auf \"true\" setzen, \r\nwenn Node-Red gestartet wird"
+    },
+    {
+        "id": "e2ebb622622ad8ed",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "d183b59ff44aeb73",
+        "name": "set valueFromMQTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "valueFromMQTT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 760,
+        "wires": [
+            [
+                "b50281f1b6f0a8b2"
+            ]
+        ],
+        "info": "Dient zur Erkennung, ob in Node-Red der \r\nSchieberegler zum Ein- und Ausblenden der\r\nUI-Elemente betätigt wurde. \r\nWurde der Schieberegler in Node-Red betätigt,\r\ndann wird der aktuelle Wert des Schiebereglers \r\nmittels MQTT published, um in der App den \r\nakutellen Stand zu sehen."
+    },
+    {
+        "id": "3de971733f3036ed",
+        "type": "mqtt in",
+        "z": "3a9b402ed7210a81",
+        "g": "d183b59ff44aeb73",
+        "name": "MQTT Subscriber \"showSPO2\"",
+        "topic": "showSPO2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0064708ed1d57071",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "e2ebb622622ad8ed"
+            ]
+        ]
+    },
+    {
+        "id": "aaa19f0ec95f7b0d",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "355e3fdb19ce85dc",
+        "name": "publish \"showSPO2\"",
+        "property": "action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "valueFromMQTT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1040,
+        "y": 860,
+        "wires": [
+            [
+                "973f701ea5ed0e56"
+            ]
+        ]
+    },
+    {
+        "id": "973f701ea5ed0e56",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "355e3fdb19ce85dc",
+        "name": "MQTT Publisher \"showSPO2\"",
+        "topic": "showSPO2",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1310,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "46a31d4def1c8f58",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "6286612d9eaca6ca",
+        "name": "set startValue",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 600,
+        "y": 560,
+        "wires": [
+            [
+                "58e68c99e67884d0"
+            ]
+        ],
+        "info": "Schieberegler auf \"true\" setzen, \r\nwenn Node-Red gestartet wird"
+    },
+    {
+        "id": "4b1d6ab5effdb195",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "8e3ed1b11fc9d0e5",
+        "name": "set valueFromMQTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "valueFromMQTT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 480,
+        "wires": [
+            [
+                "58e68c99e67884d0"
+            ]
+        ],
+        "info": "Dient zur Erkennung, ob in Node-Red der \r\nSchieberegler zum Ein- und Ausblenden der\r\nUI-Elemente betätigt wurde. \r\nWurde der Schieberegler in Node-Red betätigt,\r\ndann wird der aktuelle Wert des Schiebereglers \r\nmittels MQTT published, um in der App den \r\nakutellen Stand zu sehen."
+    },
+    {
+        "id": "d5ac4dab3a9918ff",
+        "type": "mqtt in",
+        "z": "3a9b402ed7210a81",
+        "g": "8e3ed1b11fc9d0e5",
+        "name": "MQTT Subscriber \"showPulseGraph\"",
+        "topic": "showPulseGraph",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0064708ed1d57071",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 290,
+        "y": 480,
+        "wires": [
+            [
+                "4b1d6ab5effdb195"
+            ]
+        ]
+    },
+    {
+        "id": "a2c944097dfc437f",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "364f9748a50785e3",
+        "name": "publish \"showPulseGraph\"",
+        "property": "action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "valueFromMQTT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1120,
+        "y": 580,
+        "wires": [
+            [
+                "8c3ee98af2a92406"
+            ]
+        ]
+    },
+    {
+        "id": "8c3ee98af2a92406",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "364f9748a50785e3",
+        "name": "MQTT Publisher \"showPulseGraph\"",
+        "topic": "showPulseGraph",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1420,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1ab5059769f7873a",
+        "type": "change",
+        "z": "3a9b402ed7210a81",
+        "g": "e00407dc8ddca475",
+        "name": "set valueFromMQTT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "action",
+                "pt": "msg",
+                "to": "valueFromMQTT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "e53cc1594e92ba17"
+            ]
+        ]
+    },
+    {
+        "id": "230c3ac6ecaaab48",
+        "type": "mqtt in",
+        "z": "3a9b402ed7210a81",
+        "g": "e00407dc8ddca475",
+        "name": "MQTT Subscriber \"showPulse\"",
+        "topic": "showPulse",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "0064708ed1d57071",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 200,
+        "wires": [
+            [
+                "1ab5059769f7873a"
+            ]
+        ]
+    },
+    {
+        "id": "174ed65ef5ce7d64",
+        "type": "inject",
+        "z": "3a9b402ed7210a81",
+        "g": "cda92ec1548d6bf5",
+        "name": "set startValue",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 600,
+        "y": 280,
+        "wires": [
+            [
+                "e53cc1594e92ba17"
+            ]
+        ]
+    },
+    {
+        "id": "582abc92816dbe9f",
+        "type": "switch",
+        "z": "3a9b402ed7210a81",
+        "g": "ac88cab7bc7af654",
+        "name": "publish \"showPulse\"",
+        "property": "action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "valueFromMQTT",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1140,
+        "y": 300,
+        "wires": [
+            [
+                "0b78351854d9e714"
+            ]
+        ]
+    },
+    {
+        "id": "0b78351854d9e714",
+        "type": "mqtt out",
+        "z": "3a9b402ed7210a81",
+        "g": "ac88cab7bc7af654",
+        "name": "MQTT Publisher \"showPulse\"",
+        "topic": "showPulse",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0064708ed1d57071",
+        "x": 1420,
+        "y": 300,
+        "wires": []
+    }
+]

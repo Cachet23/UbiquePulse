@@ -27,7 +27,7 @@ const App: React.FC = () => {
     const loadHeartbeatSound = async () => {
       if (!audioContext) return;
       try {
-        const response = await fetch('/heartbeat.mp3'); // Your mp3 file
+        const response = await fetch('/heartbeat2.mp3'); // Your mp3 file
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
