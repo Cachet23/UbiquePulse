@@ -9,9 +9,9 @@ MAX30100 sensor;
 PulseOximeter pox;
 uint32_t tsLastReport = 0;
 
-//void onBeatDetected() {
-//    Serial.println("Beat detected!");
-//}
+void onBeatDetected() {
+    Serial.println("Beat detected!");
+}
 
 void setup() {
     Serial.begin(115200);
@@ -40,7 +40,7 @@ void setup() {
     }
 
     // Register a callback for beat detection
-    //pox.setOnBeatDetectedCallback(onBeatDetected);
+    pox.setOnBeatDetectedCallback(onBeatDetected);
 }
 
 void loop() {
