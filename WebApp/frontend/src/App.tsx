@@ -4,6 +4,7 @@ import { Message, Client } from 'paho-mqtt';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import SensorDataDisplay from './components/SensorDataDisplay';
+import AggregateDataDisplay from './components/AggregateDataDisplay';
 
 interface SensorData {
   heartRate: number;
@@ -124,6 +125,7 @@ const App: React.FC = () => {
         />
       )}
       <SensorDataDisplay sensorData={sensorData} redValues={redValues} />
+      <AggregateDataDisplay />
       <audio ref={audioRef} src="/heartbeat2.mp3" preload="auto" />
     </div>
   );

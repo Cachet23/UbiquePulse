@@ -10,8 +10,8 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ soundEnabled, sendRedRaw, toggleSound, toggleSendRedRaw }) => {
   return (
-    <div className="absolute top-0 right-0 mt-12 mr-4 w-48 bg-white rounded-md shadow-lg z-20 p-4 md:w-64 lg:w-72">
-      <div className="flex items-center justify-between">
+      <div className="absolute top-0 right-0 mt-24 mr-4 w-48 bg-white rounded-md shadow-lg z-20 p-4 md:w-64 lg:w-72">
+        <div className="flex items-center justify-between">
         <span className="text-gray-800">Sound</span>
         <Switch
           onChange={toggleSound}

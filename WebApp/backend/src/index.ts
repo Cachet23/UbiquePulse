@@ -2,9 +2,13 @@ import express from 'express';
 import mongoose from 'mongoose';
 import createMQTTClient from './mqttClient';
 import SensorData from './sensorDataModel';
+import cors from 'cors'; // CORS importieren
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// CORS für alle Anfragen aktivieren
+app.use(cors());
 
 // MongoDB-Verbindung herstellen
 const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/sensordata';
@@ -23,7 +27,6 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 app.use(express.json());
-
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
@@ -31,6 +34,15 @@ app.get('/', (req, res) => {
 app.get('/data', async (req, res) => {
   try {
     const data = await SensorData.find().sort({ timestamp: -1 }).limit(10); // Letzte 10 Datensätze
+    res.json(data);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+app.get('/aggregate', async (req, res) => {
+  try {
+    const data = await SensorData.find().sort({ timestamp: -1 }).limit(50);
     res.json(data);
   } catch (err) {
     res.status(500).send(err);
@@ -68,18 +80,23 @@ setInterval(async () => {
     const spO2Avg = aggregatedData.spO2.reduce((a, b) => a + b, 0) / aggregatedData.spO2.length;
     const redAvg = aggregatedData.red.reduce((a, b) => a + b, 0) / aggregatedData.red.length;
 
-    const sensorData = new SensorData({
-      timestamp: new Date(),
-      heartRate: heartRateAvg,
-      spO2: spO2Avg,
-      red: redAvg,
-    });
+    // Sicherstellen, dass die Durchschnittswerte gültige Zahlen sind
+    if (!isNaN(heartRateAvg) && !isNaN(spO2Avg) && !isNaN(redAvg)) {
+      const sensorData = new SensorData({
+        timestamp: new Date(),
+        heartRate: heartRateAvg,
+        spO2: spO2Avg,
+        red: redAvg,
+      });
 
-    try {
-      await sensorData.save();
-      console.log('Aggregated data saved:', sensorData);
-    } catch (err) {
-      console.error('Error saving aggregated data:', err);
+      try {
+        await sensorData.save();
+        console.log('Aggregated data saved:', sensorData);
+      } catch (err) {
+        console.error('Error saving aggregated data:', err);
+      }
+    } else {
+      console.error('Invalid aggregated data:', { heartRateAvg, spO2Avg, redAvg });
     }
 
     // Clear aggregated data
