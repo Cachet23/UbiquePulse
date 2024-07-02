@@ -1,0 +1,546 @@
+[
+    {
+        "id": "5c9f1e3261048d21",
+        "type": "serial in",
+        "z": "e4744bec5a69cd62",
+        "name": "Serial In",
+        "serial": "ecc7e4ac137d1e4b",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "e1e53015378c6c86",
+                "e04ca52536f7febd",
+                "16b836c98a9615ea"
+            ]
+        ]
+    },
+    {
+        "id": "e1e53015378c6c86",
+        "type": "function",
+        "z": "e4744bec5a69cd62",
+        "name": "Parse Data",
+        "func": "var data;\ntry {\n    data = JSON.parse(msg.payload);\n} catch (e) {\n    if (msg.payload.includes(\"Beat detected!\")) {\n        // Ignoriere Beat detected Nachrichten in diesem Knoten\n        return null;\n    } else {\n        node.error('JSON parsing error', msg);\n        return null;\n    }\n}\n\nif (data.heartRate == null || data.spO2 == null || data.red == null) {\n    node.error('Invalid data format', msg);\n    return null;\n}\n\nvar heartRateMsg = { payload: data.heartRate, topic: \"Heart Rate\" };\nvar spO2Msg = { payload: data.spO2, topic: \"SpO2\" };\nvar redMsg = { payload: data.red, topic: \"Red\" };\n\nreturn [heartRateMsg, spO2Msg, redMsg];\n",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 220,
+        "wires": [
+            [
+                "d5f00d592400363e",
+                "46ce045851b32034",
+                "a9ecbe66e57a78f2"
+            ],
+            [
+                "cf7abf4643363384",
+                "f2dca9854a14800b",
+                "a9ecbe66e57a78f2"
+            ],
+            [
+                "73089fcbdc0f4ca4",
+                "fac5030fdc115839",
+                "a9ecbe66e57a78f2"
+            ]
+        ]
+    },
+    {
+        "id": "d5f00d592400363e",
+        "type": "ui_chart",
+        "z": "e4744bec5a69cd62",
+        "name": "Heart Rate Graph",
+        "group": "53f9cf165263ec0b",
+        "order": 1,
+        "width": "10",
+        "height": 4,
+        "label": "Heart Rate ",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "200",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 970,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf7abf4643363384",
+        "type": "ui_chart",
+        "z": "e4744bec5a69cd62",
+        "name": "SpO2 Graph",
+        "group": "53f9cf165263ec0b",
+        "order": 2,
+        "width": "10",
+        "height": 4,
+        "label": "SpO2",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 950,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73089fcbdc0f4ca4",
+        "type": "ui_chart",
+        "z": "e4744bec5a69cd62",
+        "name": "Red Raw Graph",
+        "group": "53f9cf165263ec0b",
+        "order": 3,
+        "width": "10",
+        "height": 4,
+        "label": "Red Raw Value",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "42500",
+        "ymax": "50000",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "46ce045851b32034",
+        "type": "ui_text",
+        "z": "e4744bec5a69cd62",
+        "group": "53f9cf165263ec0b",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "Heart Rate Value",
+        "label": "Current Heart Rate:",
+        "format": "{{msg.payload}} bpm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f2dca9854a14800b",
+        "type": "ui_text",
+        "z": "e4744bec5a69cd62",
+        "group": "53f9cf165263ec0b",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "SpO2 Value",
+        "label": "Current SpO2:",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fac5030fdc115839",
+        "type": "ui_text",
+        "z": "e4744bec5a69cd62",
+        "group": "53f9cf165263ec0b",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "Red Raw Value",
+        "label": "Current Red ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 960,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a9ecbe66e57a78f2",
+        "type": "debug",
+        "z": "e4744bec5a69cd62",
+        "name": "Debug",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e04ca52536f7febd",
+        "type": "function",
+        "z": "e4744bec5a69cd62",
+        "name": "BeatDetection",
+        "func": "var beatDetected = msg.payload.includes(\"Beat detected!\");\n\nif (beatDetected) {\n    var beatMsg = {\n        payload: JSON.stringify({ beat: true })\n    };\n    return beatMsg;\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "0742d79469bba665"
+            ]
+        ]
+    },
+    {
+        "id": "0742d79469bba665",
+        "type": "mqtt out",
+        "z": "e4744bec5a69cd62",
+        "name": "BeatPublisher",
+        "topic": "Beat",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f0315e3a07795ade",
+        "x": 960,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "cbc1d61a6ddc2c52",
+        "type": "mqtt in",
+        "z": "e4744bec5a69cd62",
+        "name": "redRawSubscriber",
+        "topic": "sendRedRaw",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f0315e3a07795ade",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 970,
+        "y": 600,
+        "wires": [
+            [
+                "e0c0ece6618afbf9"
+            ]
+        ]
+    },
+    {
+        "id": "e0c0ece6618afbf9",
+        "type": "switch",
+        "z": "e4744bec5a69cd62",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1130,
+        "y": 600,
+        "wires": [
+            [
+                "f1cf4d97602d1267"
+            ],
+            [
+                "c318e7e8f663b7f7"
+            ]
+        ]
+    },
+    {
+        "id": "f1cf4d97602d1267",
+        "type": "change",
+        "z": "e4744bec5a69cd62",
+        "name": "Switch to Prepare4Broker",
+        "rules": [
+            {
+                "t": "set",
+                "p": "redRawEnabled",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1350,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c318e7e8f663b7f7",
+        "type": "change",
+        "z": "e4744bec5a69cd62",
+        "name": "Switch to Prepare4Broker[ohne RedRaw]",
+        "rules": [
+            {
+                "t": "set",
+                "p": "redRawEnabled",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1380,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ec9f45b1ed268a9",
+        "type": "function",
+        "z": "e4744bec5a69cd62",
+        "name": "Prepare4Broker",
+        "func": "var data;\ntry {\n    data = JSON.parse(msg.payload);\n} catch (e) {\n    if (msg.payload.includes(\"Beat detected!\")) {\n        // Ignoriere Beat detected Nachrichten in diesem Knoten\n        return null;\n    } else {\n        node.error('JSON parsing error', msg);\n        return null;\n    }\n}\n\nif (data.heartRate == null || data.spO2 == null || data.red == null) {\n    node.error('Invalid data format', msg);\n    return null;\n}\n\n// Erstellen eines JSON-Objekts mit den Sensorwerten\nvar formattedData = {\n    heartRate: data.heartRate,\n    spO2: data.spO2,\n    red: data.red\n};\n\n// Senden des formatierten JSON-Objekts als payload\nmsg.payload = JSON.stringify(formattedData);\n\n// Rückgabe des modifizierten msg-Objekts\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 600,
+        "wires": [
+            [
+                "b3c4d52922742a3b"
+            ]
+        ]
+    },
+    {
+        "id": "9073b7ee01417fd2",
+        "type": "function",
+        "z": "e4744bec5a69cd62",
+        "name": "Prepare4Broker[ohne RedRaw]",
+        "func": "var data;\ntry {\n    data = JSON.parse(msg.payload);\n} catch (e) {\n    if (msg.payload.includes(\"Beat detected!\")) {\n        // Ignoriere Beat detected Nachrichten in diesem Knoten\n        return null;\n    } else {\n        node.error('JSON parsing error', msg);\n        return null;\n    }\n}\n\nif (data.heartRate == null || data.spO2 == null) {\n    node.error('Invalid data format', msg);\n    return null;\n}\n\n// Erstellen eines JSON-Objekts mit den Sensorwerten\nvar formattedData = {\n    heartRate: data.heartRate,\n    spO2: data.spO2,\n};\n\n// Senden des formatierten JSON-Objekts als payload\nmsg.payload = JSON.stringify(formattedData);\n\n// Rückgabe des modifizierten msg-Objekts\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 720,
+        "wires": [
+            [
+                "b3c4d52922742a3b"
+            ]
+        ]
+    },
+    {
+        "id": "b3c4d52922742a3b",
+        "type": "mqtt out",
+        "z": "e4744bec5a69cd62",
+        "name": "PulseDataPublisher",
+        "topic": "Pulse",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f0315e3a07795ade",
+        "x": 970,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "16b836c98a9615ea",
+        "type": "function",
+        "z": "e4744bec5a69cd62",
+        "name": "Select Prepare Node",
+        "func": "if (flow.get(\"redRawEnabled\")) {\n    node.send([msg, null]);\n} else {\n    node.send([null, msg]);\n}\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "5ec9f45b1ed268a9"
+            ],
+            [
+                "9073b7ee01417fd2"
+            ]
+        ]
+    },
+    {
+        "id": "ecc7e4ac137d1e4b",
+        "type": "serial-port",
+        "name": "Input esp w/ sensor",
+        "serialport": "/dev/cu.usbserial-0001",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "53f9cf165263ec0b",
+        "type": "ui_group",
+        "name": "myNodeRedDashboardGroupy",
+        "tab": "6b431c80d453f656",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f0315e3a07795ade",
+        "type": "mqtt-broker",
+        "name": "mosquittoBrokerOnHetzner",
+        "broker": "49.13.173.130",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6b431c80d453f656",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
