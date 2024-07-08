@@ -1,3 +1,11 @@
+/**
+ * @file SensorDataDisplay.tsx
+ * This component is responsible for displaying sensor data including heart rate, SpO2 levels, and a graph.
+ * The RedGraph component is utilized to visualize the red raw values over time.
+ * (GPT generated)
+ * @author Nils Baierl
+ */
+
 import React from 'react';
 import RedGraph from './RedGraph';
 

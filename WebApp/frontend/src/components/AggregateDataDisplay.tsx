@@ -1,6 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+/**
+ * @file AggregateDataDisplay.tsx
+ * This file contains a React component that fetches and displays aggregated data from a specified endpoint.
+ * It uses Axios for HTTP requests and React hooks for state management and side effects.
+ * (GPT generated)
+ * @author Nils Baierl
+ */
 
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'; // Axios is used for making HTTP requests.
+
+/**
+ * @interface AggregatedData
+ * Represents the structure of aggregated data received from the backend.
+ * @author Nils Baierl
+ */
 interface AggregatedData {
   _id: string;
   timestamp: string;
@@ -9,22 +22,35 @@ interface AggregatedData {
   red: number;
 }
 
+/**
+ * @component AggregateDataDisplay
+ * Fetches and displays aggregated data from a backend service.
+ * It periodically updates the data every 10 seconds.
+ * @author Nils Baierl
+ */
 const AggregateDataDisplay: React.FC = () => {
   const [data, setData] = useState<AggregatedData[]>([]);
 
+  /**
+   * @function fetchData
+   * Asynchronously fetches aggregated data from the backend and updates the state.
+   * Utilizes Axios for the HTTP GET request.
+   * @author Nils Baierl
+   */
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/aggregate'); // Update the endpoint to include the correct port
+      const response = await axios.get('http://localhost:3001/aggregate'); 
       setData(response.data);
     } catch (error) {
       console.error('Error fetching aggregated data:', error);
     }
   };
 
+  // useEffect hook to fetch data on component mount and set up a periodic refresh every 10 seconds.
   useEffect(() => {
     fetchData();
-    const interval = setInterval(fetchData, 10000); // Daten alle 10 Sekunden abfragen
-    return () => clearInterval(interval); // Intervall beim Demontieren der Komponente bereinigen
+    const interval = setInterval(fetchData, 10000); 
+    return () => clearInterval(interval); 
   }, []);
 
   return (

@@ -1,9 +1,23 @@
+/**
+ * @file Header.tsx
+ * This component displays the application's title and a menu button.
+ * Utilizes React for component structure and Tailwind CSS for styling.
+ * (GPT generated)
+ * @author Dominik Schwagerl
+ */
+
 import React from 'react';
 
 interface HeaderProps {
   onMenuClick: () => void;
 }
 
+/**
+ * The Header functional component displays the dashboard's main header.
+ * Includes a title and a menu button that triggers the `onMenuClick` event when clicked.
+ * @param {HeaderProps} props - The props for this component.
+ * @returns A React functional component.
+ */
 const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
   return (
     <header className="bg-blue-600 w-full py-2 md:py-6 text-white text-center shadow-md flex flex-col md:flex-row justify-between items-center">

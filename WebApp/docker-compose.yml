@@ -1,3 +1,5 @@
+# author: Nils Baierl
+# (GPT generated)
 version: '3.8'
 
 services:
@@ -22,7 +24,7 @@ services:
       - mongodb
 
   mongodb:
-    image: mongo:latest
+    image: mongo:latest # pull latest mongo image from docker registry
     ports:
       - "27017:27017"
     volumes:

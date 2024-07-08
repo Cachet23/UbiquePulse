@@ -1,3 +1,8 @@
+/**
+ * @fileoverview  *Schema for storing sensor data in MongoDB.
+ * @author Dominik Schwagerl
+ */
+
 import mongoose from 'mongoose';
 
 const sensorDataSchema = new mongoose.Schema({

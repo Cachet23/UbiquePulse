@@ -1,3 +1,10 @@
+/**
+ * @file RedGraph.tsx
+ * This component renders a line graph for red sensor values over time using react-chartjs-2.
+ * (GPT generated)
+ * @author Nils Baierl
+ */
+
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, CategoryScale, TimeScale, Tooltip, Legend } from 'chart.js';

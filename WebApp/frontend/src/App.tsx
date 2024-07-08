@@ -1,11 +1,27 @@
+/**
+ * @file App.tsx
+ * @description This file contains the main React component for the application. It handles MQTT client setup, sensor data management, and UI rendering.
+ * @technology This file uses React for component-based UI development, and Paho MQTT for MQTT communication.
+ * @module App
+ * @Author Nils Baierl
+ * (GPT generated)
+ */
+
 import React, { useState, useEffect, useRef } from 'react';
 import createMQTTClient from './mqttClient';
-import { Message, Client } from 'paho-mqtt';
+import { Client } from 'paho-mqtt';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import SensorDataDisplay from './components/SensorDataDisplay';
 import AggregateDataDisplay from './components/AggregateDataDisplay';
 
+/**
+ * @interface SensorData
+ * @description Interface representing the structure of sensor data.
+ * @property {number} heartRate - The heart rate value.
+ * @property {number} spO2 - The blood oxygen saturation level.
+ * @property {number} red - The red value from the sensor data.
+ */
 interface SensorData {
   heartRate: number;
   spO2: number;
@@ -17,6 +33,10 @@ interface RedData {
   value: number;
 }
 
+/**
+ * @component App
+ * @description Main application component. Handles MQTT client setup, state management for sensor data, audio context, and UI rendering.
+ */
 const App: React.FC = () => {
   const [sensorData, setSensorData] = useState<SensorData | null>(null);
   const [redValues, setRedValues] = useState<RedData[]>([]);
@@ -28,11 +48,15 @@ const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  /**
+   * @function useEffect
+   * @description Effect hook to load heartbeat sound asynchronously 
+   */
   useEffect(() => {
     const loadHeartbeatSound = async () => {
       if (!audioContext) return;
       try {
-        const response = await fetch('/heartbeat2.mp3'); // Your mp3 file
+        const response = await fetch('/heartbeat2.mp3'); 
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -50,6 +74,10 @@ const App: React.FC = () => {
     }
   }, [audioContext]);
 
+  /**
+   * @function useEffect
+   * @description Effect hook to initialize MQTT client and handle incoming messages.
+   */
   useEffect(() => {
     if (!client) {
       const mqttClient = createMQTTClient(
@@ -90,6 +118,10 @@ const App: React.FC = () => {
     }
   };
 
+  /**
+   * @function toggleSendRedRaw
+   * @description Toggles the sendRedRaw state and sends the updated state to the MQTT client.
+   */
   const toggleSendRedRaw = () => {
     const newValue = !sendRedRaw;
     setSendRedRaw(newValue);
@@ -99,6 +131,10 @@ const App: React.FC = () => {
     }
   };
 
+  /**
+   * @function initializeAudioContext
+   * @description Initializes the audio context if not already initialized.
+   */
   const initializeAudioContext = () => {
     if (!audioContext) {
       const context = new (window.AudioContext || (window as any).webkitAudioContext)();
@@ -106,6 +142,10 @@ const App: React.FC = () => {
     }
   };
 
+  /**
+   * @function handleUserGesture
+   * @description user needs to make an interaction with the website to enable audio 
+   */
   const handleUserGesture = () => {
     initializeAudioContext();
     if (audioRef.current) {
