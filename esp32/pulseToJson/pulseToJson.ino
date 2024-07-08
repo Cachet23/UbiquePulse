@@ -1,3 +1,5 @@
+// author: Dominik Schwagerl & Nils Baierl
+
 #include <Wire.h>
 #include "MAX30100.h"
 #include "MAX30100_PulseOximeter.h"
